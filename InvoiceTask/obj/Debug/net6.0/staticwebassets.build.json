@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "E7BS7ogwoPC8Lr4OXXYNLn+vBpMURLzNdnX2HItSIKM=",
+  "Source": "InvoiceTask",
+  "BasePath": "_content/InvoiceTask",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
