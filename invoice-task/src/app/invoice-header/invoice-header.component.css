@@ -1,0 +1,4 @@
+tr:hover {
+    /* webkit-filter: blur(4px); Chrome, Safari, Opera */
+    filter: blur(0.5px);
+}

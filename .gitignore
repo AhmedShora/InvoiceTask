@@ -1,0 +1,42 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+invoice-task/dist
+invoice-task/tmp
+invoice-task/out-tsc
+invoice-task/bazel-out
+
+# Node
+invoice-task/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+invoice-task/.angular/cache
+.sass-cache/
+invoice-task/connect.lock
+invoice-task/coverage
+invoice-task/libpeerconnection.log
+testem.log
+invoice-task/typings
+
+# System files
+.DS_Store
+Thumbs.db

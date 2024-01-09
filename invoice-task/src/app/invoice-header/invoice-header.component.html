@@ -1,0 +1,73 @@
+<div class="row">
+
+    <div class="col-md-6">
+        <h1>Invoice</h1>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Invoice Date</th>
+                    <!-- <th scope="col">Total</th> -->
+                    <th scope="col">Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of invoices" (click)="fillData(item)">
+                    <!-- <td>{{item.id}}</td> -->
+                    <td>{{item.customerName}}</td>
+                    <td>{{item.invoicedate}}</td>
+                    <!-- <td>2000</td> -->
+                    <td><a class="btn btn-primary ">Edit</a> | <a (click)="deleteInvoice(item.id)" class="btn btn-danger"> delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            New Invoice
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Invoice</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <!-- <label for="formGroupExampleInput" class="form-label">Invoice Name</label> -->
+                            <input type="text" [(ngModel)]="createdInvoice.customerName" class="form-control" id="formGroupExampleInput"
+                                placeholder="Invoice Name">
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Invoice Date</label>
+                            <input type="date" [(ngModel)]="createdInvoice.invoicedate" class="form-control" id="formGroupExampleInput2"
+                                placeholder="Invoice Date">
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput3" class="form-label">Invoice Cashier</label>
+                            <input type="text" [(ngModel)]="createdInvoice.cashierId" class="form-control" id="formGroupExampleInput3"
+                                placeholder="Cashier ID">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput4" class="form-label">Invoice Pranch</label>
+                            <input type="text" [(ngModel)]="createdInvoice.branchId"  class="form-control" id="formGroupExampleInput4"
+                                placeholder="Branch ID">
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="save()" data-bs-dismiss="modal">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <h1>Invoice Details</h1>
+        <app-invoice-details [data]="items"></app-invoice-details>
+    </div>
+</div>
