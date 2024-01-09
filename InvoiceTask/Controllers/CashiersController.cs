@@ -18,6 +18,8 @@ namespace InvoiceTask.Controllers
         private readonly ShaTaskContext _context;
         private readonly IMapper _mapper;
 
+        
+
         public CashiersController(ShaTaskContext context, IMapper mapper)
         {
             _context = context;
